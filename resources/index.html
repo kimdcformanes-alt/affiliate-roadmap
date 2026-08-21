@@ -1,1 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Affiliate PH Resources | Kim Formanes</title>
+  <meta name="description" content="Affiliate PH Playbooks for Shopee, TikTok Shop and Lazada, plus a reusable Affiliate Content Planner & Dashboard." />
+  <meta name="theme-color" content="#243247" />
+  <style>
+    :root{
+      --navy:#243247;
+      --navy2:#31445e;
+      --cream:#fffaf2;
+      --cream2:#f7efe4;
+      --gold:#c79a5b;
+      --gold-dark:#9d733f;
+      --ink:#1f2937;
+      --muted:#697586;
+      --line:#eadfce;
+      --white:#ffffff;
+      --green:#2f7d62;
+      --shadow:0 18px 50px rgba(36,50,71,.09);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:linear-gradient(180deg,var(--cream) 0%,#fff 48%,var(--cream) 100%);
+      color:var(--ink);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 30px));margin:auto}
+    header{
+      position:sticky;top:0;z-index:30;
+      background:rgba(255,250,242,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px
+    }
+    .brand{font-size:18px;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+    .brand span{color:var(--gold-dark)}
+    .navlinks{display:flex;gap:22px;font-size:14px;color:#516070;font-weight:700}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      min-height:48px;padding:0 18px;border-radius:14px;font-weight:850;
+      border:1px solid transparent;transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:var(--navy);color:white}
+    .btn.secondary{background:white;border-color:var(--line);color:var(--navy)}
+    .btn.gold{background:var(--gold);color:#1f2937}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border-radius:999px;
+      background:#fff5e8;border:1px solid #edd7b8;color:#845f2d;
+      font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;
+    }
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+    .hero{padding:76px 0 52px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+    h1{
+      font-size:clamp(42px,6vw,68px);line-height:1.02;letter-spacing:-.05em;
+      color:var(--navy);margin:18px 0;
+    }
+    h1 em{font-style:normal;color:var(--gold-dark)}
+    .lead{font-size:18px;color:#526071;max-width:700px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .hero-note{font-size:13px;color:var(--muted);margin-top:14px}
+    .stack{
+      position:relative;min-height:390px;
+      display:grid;place-items:center;
+    }
+    .book{
+      position:absolute;width:250px;height:330px;border-radius:24px;
+      box-shadow:0 22px 44px rgba(36,50,71,.15);border:1px solid var(--line);
+      padding:24px;background:white;
+    }
+    .book.one{transform:rotate(-8deg) translate(-55px,5px);background:linear-gradient(150deg,#fff,#fff4e5)}
+    .book.two{transform:rotate(7deg) translate(60px,18px);background:linear-gradient(150deg,#fff,#f2f7ff)}
+    .book.three{transform:rotate(0deg) translate(4px,-14px);z-index:3;background:linear-gradient(150deg,#fff,#f9f2e7)}
+    .book .mini{font-size:11px;font-weight:900;color:var(--gold-dark);text-transform:uppercase;letter-spacing:.08em}
+    .book h3{font-size:24px;line-height:1.05;color:var(--navy);margin:24px 0 10px}
+    .book p{font-size:13px;color:var(--muted)}
+    section{padding:74px 0}
+    .section-head{max-width:760px;margin-bottom:32px}
+    .section-head h2{
+      font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.035em;
+      color:var(--navy);margin:12px 0;
+    }
+    .section-head p{color:var(--muted);font-size:17px}
+    .free-banner{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:30px;
+      padding:34px;border:1px solid var(--line);border-radius:28px;
+      background:linear-gradient(140deg,#fff,#fff8ec);box-shadow:var(--shadow)
+    }
+    .free-banner h3{font-size:30px;line-height:1.15;color:var(--navy);margin:8px 0 10px}
+    .free-banner p{color:var(--muted)}
+    .checks{list-style:none;padding:0;margin:18px 0}
+    .checks li{margin:8px 0;color:#4f5c6d}
+    .checks li:before{content:"✓";color:var(--green);font-weight:900;margin-right:9px}
+    .free-cta{
+      min-height:220px;border-radius:22px;background:var(--navy);color:white;
+      padding:28px;display:flex;flex-direction:column;justify-content:center
+    }
+    .free-cta strong{font-size:22px}
+    .free-cta p{color:#d9e2ec}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .card{
+      background:white;border:1px solid var(--line);border-radius:var(--radius);
+      padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden
+    }
+    .card.featured{border-color:#d7b887;background:linear-gradient(145deg,#fff,#fff8ec)}
+    .tag{
+      display:inline-flex;padding:6px 10px;border-radius:999px;background:#f6ead8;
+      color:#7a572a;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em
+    }
+    .card h3{font-size:27px;color:var(--navy);line-height:1.15;margin:14px 0 10px}
+    .card p{color:var(--muted)}
+    .list{list-style:none;padding:0;margin:18px 0}
+    .list li{font-size:14px;color:#4f5c6d;margin:8px 0}
+    .list li:before{content:"✓";color:var(--green);font-weight:900;margin-right:8px}
+    .price{font-size:28px;font-weight:900;color:var(--navy);margin:14px 0}
+    .price small{font-size:13px;font-weight:600;color:var(--muted)}
+    .bundle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .bundle{
+      background:white;border:1px solid var(--line);border-radius:20px;padding:24px;
+      box-shadow:0 12px 30px rgba(36,50,71,.06)
+    }
+    .bundle.best{border:2px solid var(--gold);background:#fff9ef}
+    .bundle h3{color:var(--navy);margin:12px 0 8px;font-size:20px}
+    .bundle p{color:var(--muted);font-size:14px}
+    .compare{
+      overflow-x:auto;border:1px solid var(--line);border-radius:20px;background:white
+    }
+    table{width:100%;border-collapse:collapse;min-width:780px}
+    th,td{padding:15px 16px;border-bottom:1px solid #eee6dc;text-align:left}
+    th{background:#f8f1e7;color:var(--navy);font-size:13px}
+    td{font-size:14px;color:#536072}
+    td:first-child{font-weight:800;color:var(--navy)}
+    .yes{color:var(--green);font-weight:900}
+    .about{
+      display:grid;grid-template-columns:.75fr 1.25fr;gap:24px;align-items:stretch
+    }
+    .photo{
+      border-radius:24px;background:linear-gradient(145deg,#e7d4bb,#c9a976);
+      min-height:340px;padding:26px;display:flex;align-items:flex-end;color:white
+    }
+    .photo strong{font-size:30px;line-height:1.04;text-shadow:0 2px 12px rgba(0,0,0,.15)}
+    .about-card{
+      background:white;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow)
+    }
+    .about-card h2{font-size:40px;line-height:1.08;color:var(--navy);margin:14px 0}
+    .about-card p{color:#596677}
+    .faq{display:grid;gap:12px}
+    details{
+      background:white;border:1px solid var(--line);border-radius:16px;padding:18px 20px
+    }
+    summary{cursor:pointer;font-weight:850;color:var(--navy)}
+    details p{color:var(--muted);margin:10px 0 0}
+    .final{
+      padding:40px;border-radius:28px;background:var(--navy);color:white;
+      display:flex;justify-content:space-between;gap:28px;align-items:center
+    }
+    .final h2{font-size:36px;line-height:1.1;margin:0}
+    .final p{color:#dce4ed;margin:10px 0 0;max-width:650px}
+    footer{padding:34px 0 42px;color:#7f8996;font-size:12px}
+    .footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){
+      .navlinks{display:none}
+      .hero-grid,.free-banner,.about{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .bundle-grid{grid-template-columns:1fr}
+      .stack{min-height:330px}
+      .book{width:210px;height:280px}
+    }
+    @media(max-width:600px){
+      .hero{padding-top:52px}
+      .stack{min-height:300px}
+      .book{width:185px;height:250px;padding:18px}
+      .book h3{font-size:20px}
+      .final{flex-direction:column;align-items:flex-start}
+      .hero-actions .btn{width:100%}
+    }
+  </style>
+</head>
 
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Kim <span>Formanes</span></a>
+    <nav class="navlinks">
+      <a href="#playbooks">Playbooks</a>
+      <a href="#planner">Planner</a>
+      <a href="#bundles">Bundles</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn primary" href="YOUR_FREE_ROADMAP_LINK">Free Roadmap</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Affiliate PH Resources</span>
+        <h1>Choose the resource that fits <em>where you are now.</em></h1>
+        <p class="lead">
+          Platform-specific Playbooks for learning the roadmap, plus a reusable Content Planner & Dashboard for planning, shooting, posting, and tracking your affiliate content.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#playbooks">Browse Resources</a>
+          <a class="btn secondary" href="YOUR_FREE_ROADMAP_LINK">Start with the Free Roadmap</a>
+        </div>
+        <p class="hero-note">Educational resources only. No earnings or sales guarantees.</p>
+      </div>
+
+      <div class="stack" aria-hidden="true">
+        <div class="book one">
+          <div class="mini">Platform Playbook</div>
+          <h3>Shopee Affiliate PH</h3>
+          <p>Product selection, content, conversion, tracking and growth.</p>
+        </div>
+        <div class="book two">
+          <div class="mini">Platform Playbook</div>
+          <h3>TikTok Shop Affiliate PH</h3>
+          <p>Shoppable content, product selection, conversion and analytics.</p>
+        </div>
+        <div class="book three">
+          <div class="mini">Execution System</div>
+          <h3>Affiliate Content Planner & Dashboard</h3>
+          <p>Ideas → hooks → scripts → shoot → post → track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:30px">
+    <div class="wrap free-banner">
+      <div>
+        <span class="tag">Not sure where to start?</span>
+        <h3>Start with the FREE Affiliate Starter Roadmap PH</h3>
+        <p>Use the free roadmap first if you’re still figuring out which platform, content system, or resource fits you.</p>
+        <ul class="checks">
+          <li>Simple beginner roadmap</li>
+          <li>Product + content basics</li>
+          <li>What to track as you start</li>
+          <li>Recommended next resource based on your goal</li>
+        </ul>
+      </div>
+      <div class="free-cta">
+        <strong>Free first. Decide later.</strong>
+        <p>Download the roadmap, go through the basics, then choose the paid resource only if you need a more complete system.</p>
+        <a class="btn gold" href="YOUR_FREE_ROADMAP_LINK">GET THE FREE ROADMAP</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="playbooks">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> Platform Playbooks</span>
+        <h2>Pick the platform you want to focus on.</h2>
+        <p>Each Playbook is separate and platform-specific. Choose one if you want a clearer roadmap for that particular affiliate platform.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Shopee</span>
+          <h3>Shopee Affiliate PH Playbook</h3>
+          <p>Best for beginners who want a structured Shopee-specific roadmap beyond registration.</p>
+          <ul class="list">
+            <li>Product selection & what to promote</li>
+            <li>Content strategy & conversion</li>
+            <li>Analytics & tracking</li>
+            <li>Growth, compliance & common mistakes</li>
+            <li>Worksheets + 30-Day Action Plan</li>
+          </ul>
+          <a class="btn secondary" href="YOUR_SHOPEE_PAYHIP_LINK" target="_blank" rel="noopener">View Shopee Playbook</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">TikTok Shop</span>
+          <h3>TikTok Shop Affiliate PH Playbook</h3>
+          <p>Best for creators who want to improve product selection, shoppable content, conversion and performance tracking.</p>
+          <ul class="list">
+            <li>Product selection & scorecards</li>
+            <li>Shoppable video strategy</li>
+            <li>Conversion-focused content</li>
+            <li>Analytics & growth</li>
+            <li>30-Day Action Plan</li>
+          </ul>
+          <a class="btn secondary" href="YOUR_TIKTOK_PAYHIP_LINK" target="_blank" rel="noopener">View TikTok Playbook</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">Lazada</span>
+          <h3>Lazada Affiliate PH Playbook</h3>
+          <p>Best for beginners who want a Lazada-specific roadmap from product research through content and tracking.</p>
+          <ul class="list">
+            <li>Product research & selection</li>
+            <li>Traffic + short-form content</li>
+            <li>Conversion principles</li>
+            <li>Tracking & growth</li>
+            <li>30-Day Action Plan</li>
+          </ul>
+          <a class="btn secondary" href="YOUR_LAZADA_PAYHIP_LINK" target="_blank" rel="noopener">View Lazada Playbook</a>
+        </article>
+
+        <article class="card featured" id="planner">
+          <span class="tag">Execution + Tracking</span>
+          <h3>Affiliate Content Planner & Dashboard</h3>
+          <p>Best if your problem is no longer “how do I start?” but “how do I organize everything I need to post?”</p>
+          <ul class="list">
+            <li>Master Content Planner</li>
+            <li>Idea Bank + Script & Hook Bank</li>
+            <li>Batch Shoot Planner + B-roll checklist</li>
+            <li>Product Library + Weekly Planner</li>
+            <li>Views, clicks, orders, commission, CTR & CVR tracking</li>
+          </ul>
+          <div class="price">₱299 <small>one-time purchase</small></div>
+          <a class="btn primary" href="YOUR_PLANNER_PAYHIP_LINK" target="_blank" rel="noopener">Get the Planner</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="bundles" style="background:#fffaf5">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> Bundle Options</span>
+        <h2>Want more than one resource?</h2>
+        <p>Bundle options are best for affiliates working across multiple platforms or those who want both the roadmap and execution system.</p>
+      </div>
+
+      <div class="bundle-grid">
+        <div class="bundle">
+          <span class="tag">2-in-1</span>
+          <h3>Any 2 Playbooks</h3>
+          <p>Choose any two: Shopee, TikTok Shop or Lazada.</p>
+          <a class="btn secondary" href="YOUR_ANY_2_BUNDLE_LINK">View Bundle</a>
+        </div>
+
+        <div class="bundle">
+          <span class="tag">3-in-1</span>
+          <h3>Complete Playbook Bundle</h3>
+          <p>Get all three platform-specific Playbooks in one bundle.</p>
+          <a class="btn secondary" href="YOUR_3_PLAYBOOK_BUNDLE_LINK">View Bundle</a>
+        </div>
+
+        <div class="bundle best">
+          <span class="tag">Best Value</span>
+          <h3>Complete Affiliate Creator Bundle</h3>
+          <p>Shopee + TikTok Shop + Lazada Playbooks + Affiliate Content Planner & Dashboard.</p>
+          <a class="btn primary" href="YOUR_COMPLETE_BUNDLE_LINK">View Complete Bundle</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> Quick Comparison</span>
+        <h2>Which resource solves your problem?</h2>
+      </div>
+
+      <div class="compare">
+        <table>
+          <thead>
+            <tr>
+              <th>I need help with…</th>
+              <th>Shopee</th>
+              <th>TikTok</th>
+              <th>Lazada</th>
+              <th>Planner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Starting on one platform</td>
+              <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td>
+            </tr>
+            <tr>
+              <td>Product selection</td>
+              <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓ organize products</td>
+            </tr>
+            <tr>
+              <td>Platform-specific strategy</td>
+              <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td>
+            </tr>
+            <tr>
+              <td>Hooks, scripts & shoot planning</td>
+              <td>Covered in strategy</td><td>Covered in strategy</td><td>Covered in strategy</td><td class="yes">✓ main focus</td>
+            </tr>
+            <tr>
+              <td>Content calendar / workflow</td>
+              <td>—</td><td>—</td><td>—</td><td class="yes">✓</td>
+            </tr>
+            <tr>
+              <td>Views / clicks / orders tracking</td>
+              <td class="yes">✓ concepts</td><td class="yes">✓ concepts</td><td class="yes">✓ concepts</td><td class="yes">✓ working dashboard</td>
+            </tr>
+            <tr>
+              <td>30-Day Action Plan</td>
+              <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>Weekly reusable planner</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="background:#fffaf5">
+    <div class="wrap about">
+      <div class="photo"><strong>Kim<br>Formanes</strong></div>
+      <div class="about-card">
+        <span class="eyebrow"><span class="dot"></span> About</span>
+        <h2>Practical affiliate resources, built around systems.</h2>
+        <p>Hi, I’m <strong>Kim Formanes</strong>—a <strong>Senior IT Reports Analyst, digital creator, and affiliate marketer in the Philippines.</strong></p>
+        <p>I create beginner-friendly resources that combine my experience in reports, dashboards, data tracking, content creation, and affiliate marketing.</p>
+        <p>My goal is simple: <strong>turn complicated information into practical systems you can actually use.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> FAQ</span>
+        <h2>Before you purchase</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Are the Playbooks just registration guides?</summary>
+          <p>No. Registration/basic setup is only one part. Each Playbook also covers product selection, content strategy, conversion, analytics/tracking, growth, compliance, practical worksheets/templates and a 30-day action plan.</p>
+        </details>
+        <details>
+          <summary>Do I need to buy all the resources?</summary>
+          <p>No. Start with the resource that matches your current problem. If you are unsure, download the free Affiliate Starter Roadmap first.</p>
+        </details>
+        <details>
+          <summary>Does the Planner work with Google Sheets?</summary>
+          <p>The Planner is delivered as an Excel file and can also be uploaded/opened in Google Sheets. Minor formatting or chart differences may appear after conversion.</p>
+        </details>
+        <details>
+          <summary>Are results guaranteed?</summary>
+          <p>No. These are educational and organizational resources. Results depend on your products, content, audience, consistency, platform rules and other factors.</p>
+        </details>
+        <details>
+          <summary>Can I resell or redistribute the files?</summary>
+          <p>No. All files are for personal use only. No resale, redistribution, PLR or MRR rights are included.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap final">
+      <div>
+        <h2>Still not sure what to choose?</h2>
+        <p>Start with the free roadmap. It will help you identify whether you need a platform-specific Playbook, the Planner, or both.</p>
+      </div>
+      <a class="btn gold" href="YOUR_FREE_ROADMAP_LINK">Start Free</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer">
+    <div>© 2026 Kim Formanes. All rights reserved.</div>
+    <div>
+      <a href="YOUR_PRIVACY_POLICY_LINK">Privacy</a> ·
+      <a href="YOUR_TERMS_LINK">Terms</a> ·
+      <a href="YOUR_DIGITAL_PRODUCT_POLICY_LINK">Digital Product Policy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
