@@ -21,7 +21,7 @@
 </main>
 <footer><div class="wrap">© 2026 Kim Formanes • Affiliate Lab • Educational resources only.</div></footer>
 <script>
-const GOOGLE_SCRIPT_URL="PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL="https://script.google.com/macros/s/AKfycbybakS7ltoNdCSyI3ubc8HvKzeJOAnnO7o6Ok7cewZIlx4tqtdgUpAQZywInKwMSlTfbg/exec";
 const form=document.getElementById('leadForm');
 form.addEventListener('submit',async(e)=>{e.preventDefault();const name=document.getElementById('name').value.trim();const email=document.getElementById('email').value.trim();if(!name||!email)return;document.getElementById('submitBtn').textContent='OPENING YOUR FREE CLASS...';localStorage.setItem('affiliate_first_name',name);if(!GOOGLE_SCRIPT_URL.includes('PASTE_YOUR_')){const data=new URLSearchParams();data.append('name',name);data.append('email',email);data.append('source','affiliate-roadmap.vercel.app');try{await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()})}catch(err){}}window.location.href='/start/';});
 </script>
